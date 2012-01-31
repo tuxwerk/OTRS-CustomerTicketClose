@@ -1,32 +1,15 @@
 # --
-# CustomerLostPassword.dtl - provides customer HTML CustomerLostPassword screen
-# Copyright (C) 2002-2003 Martin Edenhofer <martin+code@otrs.org>
-# --
-# $Id: LostPassword.dtl,v 1.6 2004/04/19 09:56:21 martin Exp $
+# CustomerTicketCloseAlreadyClosed.dtl - provides CustomerTicketCloseAlreadyClosed screen
+# Copyright (C) 2012 tuxwerk - http://www.tuxwerk.de
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
 # did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
 # --
 <!-- start -->
+<div id="content">
 <p>
-<center>
-<table border="0" cellspacing="0" cellpadding="3" width="250">
-<tr>
-  <td class="table0" align="center"><b>$Text{"Dieses Ticket wurde bereits geschlossen."}</b></td>
-</tr>
-</table>
-</center>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+  <b>$Text{"This ticket is already closed."}</b>
 </p>
+</div>
 <!-- stop -->
