@@ -1,0 +1,21 @@
+# --
+# CustomerLostPassword.dtl - provides customer HTML CustomerLostPassword screen
+# Copyright (C) 2002-2003 Martin Edenhofer <martin+code@otrs.org>
+# --
+# $Id: LostPassword.dtl,v 1.6 2004/04/19 09:56:21 martin Exp $
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
+# --
+<!-- start -->
+<p>
+<center>
+<table border="0" cellspacing="0" cellpadding="3" width="250">
+<tr>
+  <td class="table0" align="center"><b>$Text{"Die angegebenen Daten stimmen mit keinem Ticket überein. Bitte überprüfen Sie, ob Sie den Link richtig in Ihren Browser eingefügt haben"}</b></td>
+</tr>
+</table>
+</center>
+</p>
+<!-- stop -->

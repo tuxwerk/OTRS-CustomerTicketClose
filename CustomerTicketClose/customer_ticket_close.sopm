@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <Name>CustomerTicketClose</Name>
+    <Version>1.1.0</Version>
+    <Framework>2.4.x</Framework>
+    <Vendor>tuxwerk</Vendor>
+    <URL>http://www.tuxwerk.de/</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
+    <ChangeLog Version="1.0.0" Date="2007-02-15 16:17:51">Views.</ChangeLog>
+    <ChangeLog Version="1.0.0" Date="2007-02-15 16:17:51">New package.</ChangeLog>
+    <Description Lang="de">Schließen des Tickets durch Kunden.</Description>
+    <BuildDate>?</BuildDate>
+    <BuildHost>?</BuildHost>
+    <Filelist>
+        <File Permission="644" Location="Kernel/Modules/CustomerTicketClose.pm"></File>
+        <File Permission="644" Location="Kernel/Config/Files/CustomerTicketClose.xml"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketClose.dtl"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketCloseError.dtl"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketCloseClosed.dtl"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketCloseAlreadyClosed.dtl"></File>
+    </Filelist>
+    <DatabaseInstall>
+    </DatabaseInstall>
+    <DatabaseUninstall>
+    </DatabaseUninstall>
+</otrs_package>

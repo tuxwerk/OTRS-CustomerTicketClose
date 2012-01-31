@@ -1,0 +1,32 @@
+# --
+# CustomerLostPassword.dtl - provides customer HTML CustomerLostPassword screen
+# Copyright (C) 2002-2003 Martin Edenhofer <martin+code@otrs.org>
+# --
+# $Id: LostPassword.dtl,v 1.6 2004/04/19 09:56:21 martin Exp $
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
+# --
+<!-- start -->
+<p>
+<center>
+<table border="0" cellspacing="0" cellpadding="3" width="250">
+<tr>
+  <td class="table0" align="center"><b>Vielen Dank für das Schließen des Tickets. Damit ist der Supportfall für uns abgeschlossen und wird nicht weiterverfolgt! Sollten dennoch weitere Fragen auftreten bitten wir Sie, uns erneut zu kontaktieren. Sie können uns jederzeit über unser <a href="http://www.reiner-sct.com/support/kontakt.php" style="color:#ff9a31; text-decoration:none"> Antragsformular</a> erreichen</b></td>
+</tr>
+</table>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</p>
+<!-- stop -->

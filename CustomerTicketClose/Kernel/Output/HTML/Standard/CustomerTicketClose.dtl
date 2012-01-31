@@ -1,0 +1,45 @@
+# --
+# AgentClose.dtl - provides HTML form for close mask
+# Copyright (C) 2001-2003 Martin Edenhofer <martin+code@otrs.org>
+# --
+# $Id: CustomerClose.dtl,v 1.24 2004/01/23 02:22:28 martin Exp $
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
+# --
+<table border="0" width="100%" cellspacing="0" cellpadding="3" cols="2">
+<tr>
+  <td align="left" class="table2">
+    <b>$Text{"Schlieﬂen des Tickets"}: $Data{"TicketNumber"}</b>
+  </td>
+  <td align="right" class="table2">
+    <b>-</b>
+  </td>
+</tr>
+<tr>
+  <td align="left" valign="top" colspan="2" class="table1">
+<p>
+
+<form action="$Env{"CGIHandle"}" method="post" enctype="multipart/form-data" name="compose">
+<input type="hidden" name="Action" value="CustomerTicketClose">
+<input type="hidden" name="Subaction" value="Store">
+<input type="hidden" name="TicketID" value="$Data{"TicketID"}">
+<input type="hidden" name="Number" value="$Data{"TicketNumber"}">
+<input type="hidden" name="Customer" value="$Data{"Customer"}">
+  <table border="0" width="100%">
+  <tr>
+    <td>$Text{"Bitte auf >"}$Text{"Close ticket"}$Text{"< schlieﬂen"}:</td>
+  </tr>
+  </table>
+<br>
+<input type="hidden" name="Body" value="Ticket vom Kunden geschlossen">
+<input class="button" type="submit" value="$Text{"Close ticket"}">
+</form>
+
+</p>
+
+  </td>
+</tr>
+</table>
+<!-- end form -->
