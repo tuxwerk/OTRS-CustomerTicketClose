@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>CustomerTicketClose</Name>
-    <Version>1.1.0</Version>
-    <Framework>2.4.x</Framework>
+    <Version>1.2.1</Version>
+    <Framework>3.0.x</Framework>
     <Vendor>tuxwerk</Vendor>
     <URL>http://www.tuxwerk.de/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
     <ChangeLog Version="1.0.0" Date="2007-02-15 16:17:51">Views.</ChangeLog>
     <ChangeLog Version="1.0.0" Date="2007-02-15 16:17:51">New package.</ChangeLog>
-    <Description Lang="de">Schließen des Tickets durch Kunden.</Description>
+    <ChangeLog Version="1.2.0" Date="2012-01-30 16:17:51">Update to OTRS 3.0.</ChangeLog>
+    <ChangeLog Version="1.2.1" Date="2012-01-30 16:17:51">Added SupportURL Config.</ChangeLog>
+    <Description Translatable="1">Public module to close tickets.</Description>
     <BuildDate>?</BuildDate>
     <BuildHost>?</BuildHost>
     <Filelist>
