@@ -85,9 +85,10 @@ sub Run {
         # store action
         my %Error = ();
         my $NoteID = $Self->{ParamObject}->GetParam(Param => 'CloseNoteID');
-        my $Text = $Self->{ParamObject}->GetParam(Param => 'Text') ||
-            $Self->{ParamObject}->GetParam(Param => 'Body') ||
-            'Keinen Text eingegeben.';
+        my $Text = "Ticket vom Kunden geschlossen.";
+            if ($Self->{ParamObject}->GetParam(Param => 'Comment')) {
+            $Text .= " Kommentar:\n". $Self->{ParamObject}->GetParam(Param => 'Comment');
+             }
 
         my $ArticleID = $Self->{TicketObject}->ArticleCreate(
             TicketID => $Self->{TicketID},

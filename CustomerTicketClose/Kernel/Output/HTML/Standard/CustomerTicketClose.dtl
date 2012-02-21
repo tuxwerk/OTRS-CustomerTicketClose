@@ -11,10 +11,13 @@
 <table border="0" width="100%" cellspacing="0" cellpadding="3" cols="2">
 <tr>
   <td align="left" class="table2">
-    <b>$Text{"Schlieﬂen des Tickets"}: $Data{"TicketNumber"}</b>
+    <b>$Text{"Closing Ticket"} $Text{"No."} $Data{"TicketNumber"}</b><br/>
+  $Text{"What is the reason for closing the ticket?"}<br/> 
+  $Text{"Were you content with our service?"}<br/>
+  $Text{"You can add a short comment if you do not mind."}<br/>
+  $Text{"Thank you"}<br/>
   </td>
   <td align="right" class="table2">
-    <b>-</b>
   </td>
 </tr>
 <tr>
@@ -26,11 +29,9 @@
 <input type="hidden" name="Subaction" value="Store">
 <input type="hidden" name="TicketID" value="$Data{"TicketID"}">
 <input type="hidden" name="Number" value="$Data{"TicketNumber"}">
-<input type="hidden" name="Customer" value="$Data{"Customer"}">
+<input type="hidden" name="Customer" value="$Data{"Customer"}" />
+<textarea cols="40" rows="6" placeholder="$Text{"Enter comment"}" type="text" name="Comment" value="$Data{"Comment"}"></textarea>
   <table border="0" width="100%">
-  <tr>
-    <td>$Text{"Bitte auf >"}$Text{"Close ticket"}$Text{"< schlieﬂen"}:</td>
-  </tr>
   </table>
 <br>
 <input type="hidden" name="Body" value="Ticket vom Kunden geschlossen">
