@@ -8,6 +8,6 @@
 # --
 <!-- start -->
 <p>
-  <b>$Text{"Die angegebenen Daten stimmen mit keinem Ticket überein. Bitte überprüfen Sie, ob Sie den Link richtig in Ihren Browser eingefügt haben"}</b>
+  <b>$Text{"The given data are not consistent with any ticket. Please check that you have correctly inserted the link into your browser."}</b>
 </p>
 <!-- stop -->

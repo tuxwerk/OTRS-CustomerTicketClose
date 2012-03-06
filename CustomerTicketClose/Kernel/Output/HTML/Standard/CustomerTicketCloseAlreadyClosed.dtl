@@ -8,6 +8,6 @@
 # --
 <!-- start -->
 <p>
-  <b>$Text{"Dieses Ticket wurde bereits geschlossen."}</b>
+  <b>$Text{"This ticket is already closed."}</b>
 </p>
 <!-- stop -->

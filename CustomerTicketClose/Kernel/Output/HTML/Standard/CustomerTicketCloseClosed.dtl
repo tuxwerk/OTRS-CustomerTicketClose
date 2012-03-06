@@ -8,10 +8,10 @@
 # --
 <!-- start -->
 <p>
-  <b>$Text{"Vielen Dank für das Schließen des Tickets. Damit ist der Supportfall für uns abgeschlossen und wird nicht weiterverfolgt!"}</b>
+  <b>$Text{"Thank you for closing the ticket. Thus, the support case is closed for us and will not be pursued!"}</b>
 </p>
 <p>
-  $Text{"Sollten dennoch weitere Fragen auftreten, bitten wir Sie uns erneut zu kontaktieren."}
-  $Text{"Sie können uns jederzeit über unser <strong><a href="$Config{"CustomerTicketClose::SupportURL"}"> Supportformular</a></strong> erreichen."}
+  $Text{"However, should any further questions occur, please contact us again."}
+  $Text{"You can reach us anytime via our <strong><a href='%s'>support form</a></strong>.", "$Config{"CustomerTicketClose::SupportURL"}
 </p>
 <!-- stop -->
