@@ -1,8 +1,17 @@
+# --
+# CustomerTicketCloseClosed.dtl - provides CustomerTicketCloseClosed screen
+# Copyright (C) 2012 tuxwerk <info@tuxwerk.de>
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
+# --
 <!-- start -->
 <p>
-  <b>Vielen Dank für das Schließen des Tickets. Damit ist der Supportfall für uns abgeschlossen und wird nicht weiterverfolgt!
+  <b>$Text{"Vielen Dank für das Schließen des Tickets. Damit ist der Supportfall für uns abgeschlossen und wird nicht weiterverfolgt!"}</b>
 </p>
 <p>
-Sollten dennoch weitere Fragen auftreten bitten wir Sie, uns erneut zu kontaktieren. Sie können uns jederzeit über unser <strong><a href="$Config{"CustomerTicketClose::SupportURL"}"> Supportformular</a></strong> erreichen.
+  $Text{"Sollten dennoch weitere Fragen auftreten, bitten wir Sie uns erneut zu kontaktieren."}
+  $Text{"Sie können uns jederzeit über unser <strong><a href="$Config{"CustomerTicketClose::SupportURL"}"> Supportformular</a></strong> erreichen."}
 </p>
 <!-- stop -->
