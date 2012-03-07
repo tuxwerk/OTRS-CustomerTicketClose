@@ -13,7 +13,7 @@
 </p>
 <p>
   $Text{"However, should any further questions occur, please contact us again."}
-  $Text{"You can reach us anytime via our <strong><a href='%s'>support form</a></strong>.", "$Config{"CustomerTicketClose::SupportURL"}
+  $Text{"You can reach us anytime via our support form:"} <strong><a href="$Config{"CustomerTicketClose::SupportURL"}">$Text{"Click here"}</a></strong>
 </p>
 </div>
 <!-- stop -->
