@@ -7,7 +7,7 @@
 # did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
 # --
 <div id="content">
-<b>$Text{"Closing Ticket"} $Text{"No."} $Data{"TicketNumber"}</b><br/>
+<b>$Text{"Closing ticket"} $Data{"TicketNumber"}</b><br/>
 $Text{"What is the reason for closing the ticket?"}<br/>
 $Text{"Were you content with our service?"}<br/>
 $Text{"You can add a short comment if you like:"}<br/>
