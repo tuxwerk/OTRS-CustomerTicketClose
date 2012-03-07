@@ -7,7 +7,9 @@
 # did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
 # --
 <!-- start -->
+<div id="content">
 <p>
   <b>$Text{"This ticket is already closed."}</b>
 </p>
+</div>
 <!-- stop -->

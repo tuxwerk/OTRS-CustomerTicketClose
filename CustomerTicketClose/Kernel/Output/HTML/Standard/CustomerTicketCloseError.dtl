@@ -7,7 +7,9 @@
 # did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
 # --
 <!-- start -->
+<div id="content">
 <p>
   <b>$Text{"The given data are not consistent with any ticket. Please check that you have correctly inserted the link into your browser."}</b>
 </p>
+</div>
 <!-- stop -->

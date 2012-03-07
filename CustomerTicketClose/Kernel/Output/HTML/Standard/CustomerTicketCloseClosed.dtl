@@ -7,6 +7,7 @@
 # did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
 # --
 <!-- start -->
+<div id="content">
 <p>
   <b>$Text{"Thank you for closing the ticket. Thus, the support case is closed for us and will not be pursued!"}</b>
 </p>
@@ -14,4 +15,5 @@
   $Text{"However, should any further questions occur, please contact us again."}
   $Text{"You can reach us anytime via our <strong><a href='%s'>support form</a></strong>.", "$Config{"CustomerTicketClose::SupportURL"}
 </p>
+</div>
 <!-- stop -->
