@@ -60,7 +60,9 @@ sub Run {
 
     my %Ticket = $Self->{TicketObject}->TicketGet( TicketID => $Self->{TicketID},
                                                    UserID => 1);
-
+    if ($Self->{Customer} eq "-") {
+	$Self->{Customer} = "";
+    }
     if ($Ticket{'TicketNumber'}   ne $Self->{Number} ||
         $Ticket{'CustomerUserID'} ne $Self->{Customer}) {
         return
