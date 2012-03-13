@@ -43,7 +43,7 @@ sub new {
     );
 
     # check needed objects
-    for (qw(TicketID Number Customer TicketObject DBObject LayoutObject LogObject ConfigObject)) {
+    for (qw(TicketID Number TicketObject DBObject LayoutObject LogObject ConfigObject)) {
         if ( !$Self->{$_} ) {
             $Self->{LayoutObject}->FatalError( Message => "Got no $_!" );
         }
