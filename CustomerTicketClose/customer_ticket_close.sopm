@@ -4,7 +4,7 @@
     <Version>1.6.0</Version>
     <Framework>3.0.x</Framework>
     <Vendor>tuxwerk</Vendor>
-    <URL>http://www.tuxwerk.de/</URL>
+    <URL>http://www.tuxwerk.de</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3</License>
     <Description Translatable="1">Public module to close tickets.</Description>
     <Filelist>

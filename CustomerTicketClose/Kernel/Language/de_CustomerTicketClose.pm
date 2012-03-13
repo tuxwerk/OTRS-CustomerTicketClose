@@ -1,6 +1,6 @@
 # --
 # CustomerTicketClose.dtl - provides HTML form for close mask
-# Copyright (C) 2012 tuxwerk - http://www.tuxwerk.de/
+# Copyright (C) 2012 tuxwerk - http://www.tuxwerk.de
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
