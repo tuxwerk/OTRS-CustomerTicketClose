@@ -1,12 +1,11 @@
 # --
 # Kernel/Modules/AgentTicketClose.pm - close a ticket
-# Copyright (C) 2001-2009 OTRS AG, http://otrs.org/
-# --
-# $Id: AgentTicketClose.pm,v 1.69 2009/08/25 14:32:55 martin Exp $
+# Copyright (C) 2012 tuxwerk - http://www.tuxwerk.de/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (AGPL). If you
-# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
+# --
 # --
 
 package Kernel::Modules::CustomerTicketClose;
@@ -19,7 +18,7 @@ use Kernel::System::Ticket;
 use Kernel::System::Time;
 
 use vars qw($VERSION);
-$VERSION = qw($Revision: 1.69 $) [1];
+$VERSION = qw($Revision: 1.6.0 $) [1];
 
 sub new {
     my ( $Type, %Param ) = @_;
@@ -75,7 +74,7 @@ sub Run {
     my $CloseStateID = $CloseState{ID};
 
     if ($Ticket{'StateID'} == $CloseStateID) {
-        # redirect to ticket is closed
+        # redirect to "ticket already closed"
         return
             $Output.
             $Self->{LayoutObject}->Output(TemplateFile => 'CustomerTicketCloseAlreadyClosed', Data => \%Param).
@@ -87,22 +86,25 @@ sub Run {
         # store action
         my %Error = ();
         my $NoteID = $Self->{ParamObject}->GetParam(Param => 'CloseNoteID');
-        my $Text = "Ticket vom Kunden geschlossen.";
-            if ($Self->{ParamObject}->GetParam(Param => 'Comment')) {
-            $Text .= " Kommentar:\n". $Self->{ParamObject}->GetParam(Param => 'Comment');
-             }
+        my $Text = $Self->_t("Ticket closed by client.");
+	if ($Self->{ParamObject}->GetParam(Param => 'Comment')) {
+	    $Text .= "\n" 
+		. $Self->_t("Comment")
+		. ":\n" 
+		. $Self->{ParamObject}->GetParam(Param => 'Comment');
+	}
 
         my $ArticleID = $Self->{TicketObject}->ArticleCreate(
             TicketID => $Self->{TicketID},
             ArticleType => 'note-internal',
             SenderType => 'customer',
             From => "$Self->{UserFirstname} $Self->{UserLastname} <$Self->{UserEmail}>",
-            Subject => 'Vom Kunden geschlossen',
+            Subject => $Self->_t('Closed by client'),
             Body => $Text,
             ContentType => "text/plain; charset=$Self->{LayoutObject}->{'UserCharset'}",
             UserID => 1,
             HistoryType => 'AddNote',
-            HistoryComment => '%%Close',
+            HistoryComment => '%%Closed By Client',
             );
         if ($ArticleID) {
             # set state
@@ -120,7 +122,6 @@ sub Run {
         }
 	$Output .= $Self->{LayoutObject}->Output(TemplateFile => 'CustomerTicketCloseClosed', Data => \%Param);
     } else {
-
         $Output .= $Self->_Mask(
             TicketID => $Self->{TicketID},
             TicketNumber => $Ticket{'TicketNumber'},
@@ -129,6 +130,12 @@ sub Run {
     }
     $Output .= $Self->{LayoutObject}->CustomerFooter();
     return $Output;
+}
+
+sub _t {
+    my ( $Self, $Text ) = @_;
+
+    return $Self->{LayoutObject}->{LanguageObject}->Get($Text);
 }
 
 sub _Mask {

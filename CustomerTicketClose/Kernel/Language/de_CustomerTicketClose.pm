@@ -1,3 +1,12 @@
+# --
+# CustomerTicketClose.dtl - provides HTML form for close mask
+# Copyright (C) 2012 tuxwerk - http://www.tuxwerk.de/
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (GPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/gpl.txt.
+# --
+
 package Kernel::Language::de_CustomerTicketClose;
 
 use strict;
@@ -18,6 +27,8 @@ sub Data {
   $Self->{Translation}->{'You can reach us anytime via our support form:'} = 'Sie können uns jederzeit über unser Supportformular erreichen:';
   $Self->{Translation}->{'Click here'} = 'Hier klicken';
   $Self->{Translation}->{'The given data are not consistent with any ticket. Please check that you have correctly inserted the link into your browser.'} = 'Die angegebenen Daten stimmen mit keinem Ticket überein. Bitte überprüfen Sie, ob Sie den Link richtig in Ihren Browser eingefügt haben.';
-  $Self->{Translation}->{'Ticket closed by customer.'} = 'Ticket vom Kunden geschlossen.';
+  $Self->{Translation}->{'Ticket closed by client.'} = 'Ticket vom Kunden geschlossen.';
+  $Self->{Translation}->{'Closed by client'} = 'Vom Kunden geschlossen';
+  $Self->{Translation}->{'Comment'} = 'Kommentar';
 }
 1;

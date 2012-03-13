@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>CustomerTicketClose</Name>
-    <Version>1.5.1</Version>
+    <Version>1.6.0</Version>
     <Framework>3.0.x</Framework>
     <Vendor>tuxwerk</Vendor>
     <URL>http://www.tuxwerk.de/</URL>
-    <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
-    <ChangeLog Version="1.0.0" Date="2007-02-15 16:17:51">Views.</ChangeLog>
-    <ChangeLog Version="1.0.0" Date="2007-02-15 16:17:51">New package.</ChangeLog>
-    <ChangeLog Version="1.2.0" Date="2012-01-30 16:17:51">Update to OTRS 3.0.</ChangeLog>
-    <ChangeLog Version="1.2.1" Date="2012-01-30 16:17:51">Added SupportURL Config.</ChangeLog>
-    <ChangeLog Version="1.3.0" Date="2012-02-21 08:17:51">Added comment field for customers</ChangeLog>
-    <ChangeLog Version="1.4.0" Date="2012-03-07 08:17:51">Small HTML Updates</ChangeLog>
-    <ChangeLog Version="1.5.1" Date="2012-03-07 08:17:51">Allow close of tickets without customerID</ChangeLog>
-    <ChangeLog Version="1.5.1" Date="2012-03-07 08:17:51">Bugfix language file</ChangeLog>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3</License>
     <Description Translatable="1">Public module to close tickets.</Description>
-    <BuildDate>?</BuildDate>
-    <BuildHost>?</BuildHost>
     <Filelist>
         <File Permission="644" Location="Kernel/Modules/CustomerTicketClose.pm"></File>
         <File Permission="644" Location="Kernel/Config/Files/CustomerTicketClose.xml"></File>
@@ -26,8 +16,4 @@
         <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketCloseAlreadyClosed.dtl"></File>
         <File Permission="644" Location="Kernel/Language/de_CustomerTicketClose.pm"></File>
     </Filelist>
-    <DatabaseInstall>
-    </DatabaseInstall>
-    <DatabaseUninstall>
-    </DatabaseUninstall>
 </otrs_package>

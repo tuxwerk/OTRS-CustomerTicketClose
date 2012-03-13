@@ -1,3 +1,0 @@
-Add a link in the Signature
-
-<a href="&lt;OTRS_CONFIG_HttpType&gt;://&lt;OTRS_CONFIG_FQDN&gt;/&lt;OTRS_CONFIG_ScriptAlias&gt;public.pl?Action=CustomerTicketClose&amp;TicketID=&lt;OTRS_TICKET_ID&gt;&amp;Number=&lt;OTRS_TICKET_NUMBER&gt;&amp;Customer=&lt;OTRS_TICKET_CustomerUserID&gt;">Ticket schlie&szlig;en</a>

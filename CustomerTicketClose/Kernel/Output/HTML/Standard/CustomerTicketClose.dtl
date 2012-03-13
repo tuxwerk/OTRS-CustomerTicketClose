@@ -1,6 +1,6 @@
 # --
 # CustomerTicketClose.dtl - provides HTML form for close mask
-# Copyright (C) 2012 tuxwerk <info@tuxwerk.de>
+# Copyright (C) 2012 tuxwerk - http://www.tuxwerk.de/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (GPL). If you
@@ -20,7 +20,6 @@ $Text{"You can add a short comment if you like:"}<br/>
   <input type="hidden" name="Customer" value="$Data{"Customer"}" />
   <textarea cols="40" rows="6" placeholder="$Text{"Enter comment"}" type="text" name="Comment" value="$Data{"Comment"}"></textarea>
   <br>
-  <input type="hidden" name="Body" value="$Text{"Ticket closed by customer."}">
   <input class="button" type="submit" value="$Text{"Close ticket"}">
 </form>
 
