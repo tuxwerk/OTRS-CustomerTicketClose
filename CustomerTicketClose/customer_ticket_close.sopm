@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
     <Name>CustomerTicketClose</Name>
-    <Version>1.8.0</Version>
-    <Framework>3.1.x</Framework>
+    <Version>1.8.1</Version>
+    <Framework>3.3.x</Framework>
     <Vendor>tuxwerk</Vendor>
     <URL>https://github.com/tuxwerk/OTRS-CustomerTicketClose</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3</License>
