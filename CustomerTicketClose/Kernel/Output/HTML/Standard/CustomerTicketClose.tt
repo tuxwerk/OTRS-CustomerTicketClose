@@ -1,0 +1,33 @@
+# --
+# CustomerTicketClose.dtl - provides HTML form for close mask
+# Copyright (C) 2012-2016 tuxwerk - http://www.tuxwerk.de
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+<div class="Content">
+<p>
+  <b>[% Translate("Closing ticket") | html %] #[% Data.TicketNumber | html %]</b><br/>
+</p>
+<p>
+  [% Translate("What is the reason for closing the ticket?") | html %]<br/>
+  [% Translate("Have you been satisfied with our service?") | html %]<br/>
+  [% Translate("You can add a short comment if you like:") | html %]<br/>
+</p>
+
+<form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data" name="compose">
+  <input type="hidden" name="Action" value="CustomerTicketClose">
+  <input type="hidden" name="Subaction" value="Store">
+  <input type="hidden" name="TicketID" value="[% Data.TicketID | html %]">
+  <input type="hidden" name="Number" value="[% Data.TicketNumber | html %]">
+  <input type="hidden" name="Customer" value="[% Data.Customer | html %]" />
+  <textarea cols="40" rows="6" placeholder="[% Translate("Enter comment") | html %]" type="text" name="Comment" value="$Data{"Comment"}"></textarea>
+  <br>
+  <input class="button" type="submit" value="[% Translate("Close ticket") | html %]">
+</form>
+
+<p>
+  [% Translate("Thank you!") | html %]
+</p>
+</div>

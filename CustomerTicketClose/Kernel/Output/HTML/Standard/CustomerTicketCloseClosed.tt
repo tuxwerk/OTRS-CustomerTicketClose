@@ -1,0 +1,22 @@
+# --
+# CustomerTicketCloseClosed.dtl - provides CustomerTicketCloseClosed screen
+# Copyright (C) 2012-2016 tuxwerk - http://www.tuxwerk.de
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+<!-- start -->
+<div class="Content">
+<p>
+  <b>[% Translate("Thank you for closing the ticket. The support case is therefore closed for us and will not be pursued!") | html %]</b>
+</p>
+<p>
+  [% Translate("Please contact as again if you have any further questions.") | html %]
+  [% IF Config("CustomerTicketClose::SupportURL") %]
+    [% Translate("You can reach us anytime again via our support form:") | html %]
+    <strong><a href="[% Config("CustomerTicketClose::SupportURL") %]">[% Translate("Click here") | html %]</a></strong>
+  [% END %] 
+</p>
+</div>
+<!-- stop -->
