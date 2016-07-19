@@ -17,9 +17,6 @@ use Kernel::System::State;
 use Kernel::System::Ticket;
 use Kernel::System::Time;
 
-use vars qw($VERSION);
-$VERSION = qw($Revision: 1.6.0 $) [1];
-
 sub new {
     my ( $Type, %Param ) = @_;
 
@@ -84,8 +81,6 @@ sub Run {
     if ( $Self->{Subaction} eq 'Store' ) {
 
         # store action
-        my %Error = ();
-        my $NoteID = $Self->{ParamObject}->GetParam(Param => 'CloseNoteID');
         my $Text = $Self->_t("Ticket closed by client.");
 	if ($Self->{ParamObject}->GetParam(Param => 'Comment')) {
 	    $Text .= "\n" 
@@ -98,7 +93,6 @@ sub Run {
             TicketID => $Self->{TicketID},
             ArticleType => 'note-internal',
             SenderType => 'customer',
-            From => "$Self->{UserFirstname} $Self->{UserLastname} <$Self->{UserEmail}>",
             Subject => $Self->_t('Closed by client'),
             Body => $Text,
             ContentType => "text/plain; charset=$Self->{LayoutObject}->{'UserCharset'}",
@@ -113,7 +107,7 @@ sub Run {
                 TicketID => $Self->{TicketID},
                 StateID => $CloseStateID,
                 );
-            # set lock
+            # unset lock
             $Self->{TicketObject}->LockSet(
                 UserID => 1,
                 TicketID => $Self->{TicketID},
