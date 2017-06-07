@@ -24,23 +24,19 @@ sub new {
     my $Self = {%Param};
     bless( $Self, $Type );
 
+    #get ParamObject
+    $Self->{ParamObject} = $Kernel::OM->Get('Kernel::System::Web::Request');
+
     $Self->{TicketID} = $Self->{ParamObject}->GetParam( Param => 'TicketID' );
     $Self->{Number}   = $Self->{ParamObject}->GetParam( Param => 'Number' );
     $Self->{Customer} = $Self->{ParamObject}->GetParam( Param => 'Customer' );
 
-    $Self->{StateObject} = Kernel::System::State->new(%Param);
-
-    $Self->{TicketObject} = Kernel::System::Ticket->new(
-        ConfigObject => $Self->{ConfigObject},
-        LogObject    => $Self->{LogObject},
-        TimeObject   => $Self->{TimeObject},
-        DBObject     => $Self->{DBObject},
-        MainObject   => $Self->{MainObject},
-        EncodeObject => $Self->{EncodeObject},
-    );
+    $Self->{LayoutObject} = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
+    $Self->{StateObject}  = $Kernel::OM->Get('Kernel::System::State');
+    $Self->{TicketObject} = $Kernel::OM->Get('Kernel::System::Ticket');
 
     # check needed objects
-    for (qw(TicketID Number TicketObject DBObject LayoutObject LogObject ConfigObject)) {
+    for (qw(TicketID Number TicketObject LayoutObject)) {
         if ( !$Self->{$_} ) {
             $Self->{LayoutObject}->FatalError( Message => "Got no $_!" );
         }

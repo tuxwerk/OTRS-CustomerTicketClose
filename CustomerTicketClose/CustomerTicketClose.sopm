@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
   <Name>CustomerTicketClose</Name>
-  <Version>4.0.1</Version>
-  <Framework>4.0.x</Framework>
+  <Version>4.0.2</Version>
+  <Framework>5.0.x</Framework>
   <Vendor>tuxwerk OHG</Vendor>
   <URL>https://github.com/tuxwerk/OTRS-CustomerTicketClose</URL>
   <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
@@ -11,10 +11,10 @@
   <Filelist>
     <File Permission="644" Location="Kernel/Modules/CustomerTicketClose.pm"></File>
     <File Permission="644" Location="Kernel/Config/Files/CustomerTicketClose.xml"></File>
-    <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketClose.tt"></File>
-    <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketCloseError.tt"></File>
-    <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketCloseClosed.tt"></File>
-    <File Permission="644" Location="Kernel/Output/HTML/Standard/CustomerTicketCloseAlreadyClosed.tt"></File>
+    <File Permission="644" Location="Kernel/Output/HTML/Templates/Standard/CustomerTicketClose.tt"></File>
+    <File Permission="644" Location="Kernel/Output/HTML/Templates/Standard/CustomerTicketCloseError.tt"></File>
+    <File Permission="644" Location="Kernel/Output/HTML/Templates/Standard/CustomerTicketCloseClosed.tt"></File>
+    <File Permission="644" Location="Kernel/Output/HTML/Templates/Standard/CustomerTicketCloseAlreadyClosed.tt"></File>
     <File Permission="644" Location="Kernel/Language/de_CustomerTicketClose.pm"></File>
   </Filelist>
   <IntroInstall Type="post" Lang="en" Title="Configuration"><![CDATA[
