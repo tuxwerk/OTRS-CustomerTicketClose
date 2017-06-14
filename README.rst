@@ -2,7 +2,7 @@
  OTRS Package - Customer Ticket Close
 =====================================
 
-This is a package for the ticket system OTRS_ 4.0
+This is a package for the ticket system OTRS_ 5.0
 
 This package allows the client to close his ticket through the public 
 interface. The client needs not to be logged in and is able to 
