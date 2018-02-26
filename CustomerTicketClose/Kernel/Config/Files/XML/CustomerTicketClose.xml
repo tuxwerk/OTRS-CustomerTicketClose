@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?> <otrs_config version="2.0" init="Application">
+  <Setting Name="PublicFrontend::Module###CustomerTicketClose" Required="0" Valid="1">
+    <Description Lang="en">Public module to close tickets.</Description>
+    <Navigation>Frontend::Public::ModuleRegistration</Navigation>
+    <Value>
+            <Item ValueType="FrontendRegistration">
+                <Hash>
+                    <Item Key="Group">
+                        <Array>
+                        </Array>
+                    </Item>
+                    <Item Key="GroupRo">
+                        <Array>
+                        </Array>
+                    </Item>
+            <Item Key="Description">CustomerTicketClose</Item>
+            <Item Key="Title">CustomerTicketClose</Item>
+            <Item Key="NavBarName"></Item>
+          </Hash>
+            </Item>
+        </Value>
+  </Setting>
+    <Setting Name="PublicFrontend::Navigation###CustomerTicketClose###002-CustomerTicketClose" Required="0" Valid="0">
+        <Description Translatable="1">Main menu item registration.</Description>
+        <Navigation>Frontend::Public::ModuleRegistration</Navigation>
+        <Value>
+            <Array>
+                <DefaultItem ValueType="FrontendNavigation">
+                    <Hash>
+                    </Hash>
+                </DefaultItem>
+            </Array>
+        </Value>
+    </Setting>
+   <Setting Name="CustomerTicketClose::SupportURL" Required="0" Valid="1">
+    <Description Lang="en">URL of support form</Description>
+    <Navigation>CustomerTicketClose::Core</Navigation>
+    <Value>
+      <Item ValueType="String" ValueRegex=""></Item>
+    </Value>
+  </Setting> </otrs_config>
