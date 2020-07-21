@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
   <Name>CustomerTicketClose</Name>
-  <Version>5.0.0</Version>
-  <Framework>5.0.x</Framework>
+  <Version>6.0.0</Version>
+  <Framework>6.0.x</Framework>
   <Vendor>tuxwerk OHG</Vendor>
   <URL>https://github.com/tuxwerk/OTRS-CustomerTicketClose</URL>
   <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
@@ -10,7 +10,7 @@
   <Description Lang="de">Dieses Paket erlaubt es dem Kunden das Ticket über die öffentliche Web-Schnittstelle zu schließen. Der Kunde muß nicht eingeloggt sein und kann einen Kommentar hinterlassen (z.B. den Grund für die Schließung). Zugang ist über TicketID, Nummer und Customer (wenn verfügbar) eingeschränkt.</Description>
   <Filelist>
     <File Permission="644" Location="Kernel/Modules/CustomerTicketClose.pm"></File>
-    <File Permission="644" Location="Kernel/Config/Files/CustomerTicketClose.xml"></File>
+    <File Permission="644" Location="Kernel/Config/Files/XML/CustomerTicketClose.xml"></File>
     <File Permission="644" Location="Kernel/Output/HTML/Templates/Standard/CustomerTicketClose.tt"></File>
     <File Permission="644" Location="Kernel/Output/HTML/Templates/Standard/CustomerTicketCloseError.tt"></File>
     <File Permission="644" Location="Kernel/Output/HTML/Templates/Standard/CustomerTicketCloseClosed.tt"></File>
